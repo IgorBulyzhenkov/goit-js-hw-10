@@ -1,7 +1,8 @@
 const BASE_URL = 'https://restcountries.com';
+const options = `?fields=name,capital,population,flags,languages`;
 
 export const fetchCountries = country => {
-  return fetch(`${BASE_URL}/v3.1/name/${country}`).then(
+  return fetch(`${BASE_URL}/v3.1/translation/${country}${options}`).then(
     response => {
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -11,10 +12,3 @@ export const fetchCountries = country => {
     }
   );
 };
-
-//https://restcountries.com/v2/{service}?fields={field},{field},{field}
-// name.official - полное имя страны
-// capital - столица
-// population - население
-// flags.svg - ссылка на изображение флага
-// languages - массив языков
