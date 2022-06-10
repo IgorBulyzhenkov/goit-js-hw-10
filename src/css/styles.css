@@ -23,6 +23,7 @@ body {
   border-radius: 10px;
   border-color: crimson;
 }
+
 #search-box:active {
   border-color: chartreuse;
 }
@@ -31,6 +32,8 @@ ul {
   list-style: none;
   margin-left: 20px;
   padding: 0;
+  width: 190px;
+  margin: 0 auto;
 }
 
 li {
@@ -50,8 +53,9 @@ span {
   font-weight: 700;
 }
 
-.country-info{
-
+.country-info {
+  width: 250px;
+  margin: 0 auto;
 }
 
 .card {
